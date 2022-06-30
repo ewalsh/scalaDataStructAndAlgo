@@ -1,4 +1,4 @@
-package ai.economicdatasciences.memoize
+package ai.economicdatasciences.dsa.memoize
 
 class FactorialMemoiz {
   var cache: Map[Int, Int] = Map()

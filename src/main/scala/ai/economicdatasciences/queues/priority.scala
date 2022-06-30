@@ -1,4 +1,4 @@
-package ai.economicdatasciences.queues
+package ai.economicdatasciences.dsa.queues
 
 case class Fifo(out: List[Int], in: List[Int]) {
   def check(): Boolean = (out, in) match {
