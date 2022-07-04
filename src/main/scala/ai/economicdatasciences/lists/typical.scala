@@ -1,4 +1,4 @@
-package ai.economicdatasciences.dsa.structure
+package ai.economicdatasciences.dsa.lists
 
 abstract class Employee(
     firstName: String,
