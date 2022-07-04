@@ -1,4 +1,4 @@
-package ai.economicdatasciences.dsa.binarytree
+package ai.economicdatasciences.dsa.binarytree.packt
 
 /** */
 
