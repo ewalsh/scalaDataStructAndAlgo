@@ -1,6 +1,6 @@
-package ai.economicdatasciences.dsa.queue
+package ai.economicdatasciences.dsa.queues
 
-case class FQueue(out: List[Int], in: List[Int]) {
+case class FQueue(out: List[Any], in: List[Any]) {
   def check(): Boolean = (out, in) match {
     case (Nil, x :: xs) => false
     case _ => true
@@ -15,7 +15,7 @@ object FunctQueueApp {
     println(remove(myQueue))
   }
 
-  def insert(data: Int, queue: FQueue): FQueue = {
+  def insert(data: Any, queue: FQueue): FQueue = {
     val newIn = data :: queue.in
     queue.out match {
       case Nil => FQueue(newIn.reverse, Nil)
@@ -23,7 +23,7 @@ object FunctQueueApp {
     }
   }
 
-  def remove(queue: FQueue): (Int, FQueue) = {
+  def remove(queue: FQueue): (Any, FQueue) = {
     queue.out match {
       case Nil => throw new IllegalArgumentException("Queue is empty!")
       case x :: Nil => (x, queue.copy(out = queue.in.reverse, Nil))
