@@ -1,4 +1,4 @@
-package ai.economicdatasciences.arrays
+package ai.economicdatasciences.dsa.arrays
 
 object MatrixMultApp {
   def main(args: Array[String]): Unit = {
@@ -37,10 +37,10 @@ object MatrixMultApp {
     } else {
       for (i <- 0 until mat1Rows) {
         for (j <- 0 until mat2Cols) {
-          // for (k <- 0 until mat1Cols) {
-          //   res(i)(j) += mat1(i)(k) * mat2(k)(j)
-          // }
-          res(i)(j) = mat1(i).zip(mat2.map(_(j))).map(x => x._1 * x._2).sum
+          for (k <- 0 until mat1Cols) {
+            res(i)(j) += mat1(i)(k) * mat2(k)(j)
+          }
+          // res(i)(j) = mat1(i).zip(mat2.map(_(j))).map(x => x._1 * x._2).sum
         }
       }
       res

@@ -1,14 +1,21 @@
 package ai.economicdatasciences.dsa.maxsubarr
 
+import scala.util.Random
+
 object MaxContSubArrayApp {
   def main(args: Array[String]): Unit = {
-    val stockPriceDiff = Vector(1, -2, 5, 6, -1, 4, 9, -3, 2, 5)
+    // val stockPriceDiff = Vector(1, -2, 5, 6, -1, 4, 9, -3, 2, 5)
+    val stockPriceDiff = Iterator.range(0, 10).map(_ => Random.nextInt).toVector
     println(findContSubArrayMax(stockPriceDiff))
+
+    val (subL, subR) = stockPriceDiff.splitAt(stockPriceDiff.length / 2)
+    println(leftRightCrossMax(subL, subR))
   }
 
   def findContSubArrayMax(data: Vector[Int]): Int = data match {
     case Vector(x) => x
     case _ => {
+      // println("running")
       val (l, r) = data.splitAt(data.length / 2)
       val leftMax = findContSubArrayMax(l)
       val rightMax = findContSubArrayMax(r)
