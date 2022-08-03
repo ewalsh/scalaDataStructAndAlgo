@@ -1,30 +1,34 @@
 package ai.economicdatasciences.sandbox
 
-class PrimeContainer {
 
-  def squareRoot(x: Int): Double = {
-    scala.math.sqrt(x)
-  }
 
-  def genPrimesList(limit: Int): Stream[Int] = {
-    val numStream: Stream[Int] = 2 #:: Stream.from(3)
-    val primes = numStream.filter(x => {
-      val limitedNum = numStream.takeWhile(y => {
-        y <= squareRoot(x)
-      })
-      !limitedNum.exists(y => x % y == 0)
-    })
 
-    primes.take(limit)
-  }
-}
 
-object PrimeContainerApp {
-  def main(args: Array[String]): Unit = {
-    val pc = new PrimeContainer
-    println(pc.genPrimesList(15).toList.map(_ + ", ").mkString)
-  }
-}
+// class PrimeContainer {
+//
+//   def squareRoot(x: Int): Double = {
+//     scala.math.sqrt(x)
+//   }
+//
+//   def genPrimesList(limit: Int): Stream[Int] = {
+//     val numStream: Stream[Int] = 2 #:: Stream.from(3)
+//     val primes = numStream.filter(x => {
+//       val limitedNum = numStream.takeWhile(y => {
+//         y <= squareRoot(x)
+//       })
+//       !limitedNum.exists(y => x % y == 0)
+//     })
+//
+//     primes.take(limit)
+//   }
+// }
+//
+// object PrimeContainerApp {
+//   def main(args: Array[String]): Unit = {
+//     val pc = new PrimeContainer
+//     println(pc.genPrimesList(15).toList.map(_ + ", ").mkString)
+//   }
+// }
 
 // class FactorialMemoiz {
 //   //* FACTORIAL WITH CACHING *//
