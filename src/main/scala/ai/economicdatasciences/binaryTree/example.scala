@@ -40,7 +40,7 @@ object ExcampleBinTreeApp {
     val myBinTree = createTree(myList)
     val exp = new ExampleBinTree(myBinTree)
     val test = exp.collectDepthFirst(myBinTree, List[(Int, Int)]())
-    // println(test.groupBy(_._1).map(x => (x._1, x._2.map(_._2).sum / x._2.length)))
+    println(exp.dcatch.groupBy(_._1).map(x => (x._1, x._2.map(_._2).sum / x._2.length)))
   }
 
   def createTree(list: List[Int]): BinaryTree[Int] = list match {
