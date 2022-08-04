@@ -111,4 +111,13 @@ object TreeBuilder {
   // create empty
   def empty[A](): Dictionary[A] = Leaf
 
+  // create complete binary tree
+  // def createCompleteBinaryTree(value: A, depth: Int): BinaryTree[A] = {
+  //   if(depth == 0){
+  //     Leaf
+  //   } else {
+  //     Branch(value, createCompleteBinaryTree())
+  //   }
+  // }
+
 }

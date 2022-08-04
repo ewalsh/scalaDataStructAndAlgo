@@ -34,6 +34,7 @@ object GraphAlgo {
     case x :: xs => slowRev(xs) :+ x
   }
 
+  // should be able to use this for less appending
   @tailrec
   def rev(list: List[Int], acc: List[Int] = Nil): List[Int] = list match {
     case Nil => {

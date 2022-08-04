@@ -56,6 +56,26 @@ object GraphTraversalApp {
     result.reverse
   }
 
+  // def traverseBreadthFirstNoAppend(
+  //     start: String,
+  //     graph: List[(String, String)]
+  // ): List[String] = {
+  //   def breadthFirst(
+  //       vertices: List[String],
+  //       visited: List[String]
+  //   ): List[String] = vertices match {
+  //     case Nil => visited
+  //     case x :: xs => {
+  //       breadthFirst(
+  //
+  //       )
+  //     }
+  //   }
+  //
+  //   val result = breadthFirst(List(start), List())
+  //   result.reverse
+  // }
+
   def calcSuccessorSet(
       vertex: String,
       graph: List[(String, String)]

@@ -17,6 +17,10 @@ object NaiveSubstringSearchApp {
       .getOrElse(-1)
   }
 
+  def addUpProgression(a: Int, b: Int): Stream[Int] = {
+    Stream.cons(a, addUpProgression(a + b, b))
+  }
+
   def naiveSubstringSearchAll(myWords: String, myData: String): List[Int] = {
     def searchAll(myWords: String, myDataArr: Array[Char], output: List[Int]): List[Int] = {
       val subDataString: String = myDataArr.slice(
